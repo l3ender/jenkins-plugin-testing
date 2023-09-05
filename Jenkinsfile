@@ -4,12 +4,7 @@ pipeline {
     agent any
 
     options {
-        buildDiscarder(logRotator(numToKeepStr: '30'))
-        disableConcurrentBuilds(abortPrevious: true)
-        parallelsAlwaysFailFast()
         skipDefaultCheckout()
-        timeout(time: 1, unit: 'HOURS')
-        timestamps()
     }
 
     stages {
