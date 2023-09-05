@@ -1,6 +1,8 @@
 /* groovylint-disable CompileStatic, NestedBlockDepth */
 
 pipeline {
+    agent any
+
     options {
         buildDiscarder(logRotator(numToKeepStr: '30'))
         disableConcurrentBuilds(abortPrevious: true)
