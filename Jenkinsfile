@@ -14,6 +14,7 @@ pipeline {
                     sh 'printenv'
                     if (env.CHANGE_ID) {
                         echo "change ID: ${env.CHANGE_ID}"
+                        echo pullRequest.mergeableState
                     } else {
                         echo 'no change ID!'
                     }
